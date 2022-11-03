@@ -6,7 +6,7 @@
     <!-- Add some CSS to change client UI -->
     <style>
     body {
-        background-color: #232F3E;
+        background-color: #232F00;
         }
     label, button {
         color: #FF9900;
@@ -39,7 +39,7 @@
             };
             // make API call with parameters and use promises to get response
             fetch("https://0vzwpbsnz5.execute-api.us-east-2.amazonaws.com/alpha", requestOptions)
-            .then(response => response.text())
+            .then(response => alert(JSON.parse(response.text()).message))
             .then(result => alert(JSON.parse(response.text()).message))
             .catch(error => console.log('error', error));
         }
